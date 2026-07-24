@@ -26,29 +26,26 @@ This project was built for a bash scripting course focused on network and device
 * ### bash
 * _./scanner.sh <target> [output_directory]
 
-%%
 ## Arguments
 * _target_--IP address, hostname, or CIDR range to scan (required)
 * _output_directory_--where to save reports (optional, defaults to _./reports_)
 
-%%
 ## Examples:
 ### bash
 _./scanner.sh 192.168.1.1_
 
 _./scanner.sh 192.168.1.0/24 ./reports_
-%%
+
 Reports are saved as __scan_report_<timstamp>.txt__ in the output directory, along with the raw nmap output for reference.
-%%
+
 ## Current Status
 Initial setup and basic port/service scanning functionality implemented along with automated report generation and simple risk flagging for common high-risk ports.
-%%
+
 ## Future Goals
 * Expand vulnerability identification (e.g. integrate NSE vulnerability scripts or CVE lookups)
 * Add HTML/PDF report export
 * Add configurable scan profiles (quick scan vs. full scan)
 * Add logging and scheduling support for recurring scans
 
-%%
 ## Legal / Ethical Notice
 Only scan systems and networks you own or have explicit written permission to test. Unauthorized scanning may be illegal and/or violate terms of service of your network provider.
