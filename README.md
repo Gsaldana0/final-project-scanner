@@ -14,7 +14,6 @@ This project was built for a bash scripting course focused on network and device
 * Saves both a raw nmap output file and formatted, readable report
 *Timestamps every report so scan history is preserved
 
-%%
 ## Requirements
 * Linux/Unix envoronment with Bash
 * nmap installed
