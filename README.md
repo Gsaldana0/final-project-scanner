@@ -1,11 +1,11 @@
-# final-project-scanner
-%%
+# Final-project-scanner
+
 ## Overview
 This project is a Bash-based network vuulnerability scanner that uses nmap to scan a target host or network range for open ports and running services, then generates a clear, timestamped text report summarizing the findings. The goal is to provide a lightweight, command-line tool for quickly accessing the exposed attack surface of a device or network on **networks you own or have explicit written or documented verbal permission to test**.
-%%
+
 ## Purpose / Learning
 This project was built for a bash scripting course focused on network and device security, shell scripting fundamentals, and best programming practices (argument handling, error checking, modular functions, and clean output formatting).
-%%
+
 ## Features
 * Scansa single host, hostname, or CIDR range using nmap
 * Performs service/version detection (-sV) and default safe NSE scripts (-sC)
@@ -21,7 +21,6 @@ This project was built for a bash scripting course focused on network and device
   * ### Bash
   * _sudo apt install nmap_
 
-%%
 
 ## Usage
 * ### bash
@@ -36,6 +35,7 @@ This project was built for a bash scripting course focused on network and device
 ## Examples:
 ### bash
 _./scanner.sh 192.168.1.1_
+
 _./scanner.sh 192.168.1.0/24 ./reports_
 %%
 Reports are saved as __scan_report_<timstamp>.txt__ in the output directory, along with the raw nmap output for reference.
