@@ -1,0 +1,30 @@
+============================================================
+ Network Scan Report
+============================================================
+Target:      scanme.nmap.org
+Scan Date:   Sun Aug 16 21:42:24 USMST 2026
+
+--- Open Ports and Detected Services ---
+22/tcp    open     ssh                OpenSSH 6.6.1p1 Ubuntu 2ubuntu2.13 (Ubuntu Linux; protocol 2.0)
+|   cpe:/a:openbsd:openssh:6.6.1p1: 
+80/tcp    open     http               Apache httpd 2.4.7 ((Ubuntu))
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+2000/tcp  open     tcpwrapped
+5060/tcp  open     tcpwrapped
+9929/tcp  open     nping-echo         Nping echo
+31337/tcp open     tcpwrapped
+
+--- Potential Vulnerabilities Identified ---
+
+[Strategy A: NSE Script Findings]
+|   VULNERABLE:
+|     State: LIKELY VULNERABLE
+
+[Strategy B: Known Vulnerable Version Checks]
+No known-vulnerable service versions matched from the local check list.
+
+--- Recommendations ---
+[Placeholder] Recommendations have not been implemented yet.
+[Placeholder] This section will be completed in a future milestone.
+
