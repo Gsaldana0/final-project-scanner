@@ -1,0 +1,48 @@
+============================================================
+ Network Scan Report
+============================================================
+Target:      scnanme.nmap.org
+Scan Date:   Thu Aug 20 23:07:27 USMST 2026
+
+--- Open Ports and Detected Services ---
+22/tcp  open  ssh      OpenSSH 7.4 (protocol 2.0)
+80/tcp  open  http     Apache httpd 2.4.6
+443/tcp open  ssl/http Apache httpd 2.4.6
+
+--- Potential Vulnerabilities Identified ---
+
+[Strategy A: NSE Script Findings]
+No high-confidence 'VULNERABLE' findings reported by NSE scripts.
+
+[Strategy B: Known Vulnerable Version Checks]
+No known-vulnerable service versions matched from the local check list.
+
+[Strategy C: NVD API Lookups]
+
+Querying NVD for vulnerabilities in: OpenSSH 7.4...
+  CVE ID: CVE-2016-10009
+  Description: Untrusted search path vulnerability in ssh-agent.c in ssh-agent in OpenSSH before 7.4 allows remote attackers to execute arbitrary local PKCS#11 modules by leveraging control over a forwarded agent-socket.
+  Severity: HIGH
+---
+  CVE ID: CVE-2016-10010
+  Description: sshd in OpenSSH before 7.4, when privilege separation is not used, creates forwarded Unix-domain sockets as root, which might allow local users to gain privileges via unspecified vectors, related to serverloop.c.
+  Severity: HIGH
+---
+  CVE ID: CVE-2016-10011
+  Description: authfile.c in sshd in OpenSSH before 7.4 does not properly consider the effects of realloc on buffer contents, which might allow local users to obtain sensitive private-key information by leveraging access to a privilege-separated child process.
+  Severity: MEDIUM
+---
+
+Querying NVD for vulnerabilities in: Apache httpd 2.4.6...
+  CVE ID: CVE-2026-24072
+  Description: An escalation of privilege bug in various modules in Apache HTTP 2.4.66 and earlier allows local .htaccess authors to read files with the privileges of the httpd user.  Users are recommended to upgrade to version 2.4.67, which fixes this issue.
+  Severity: HIGH
+---
+  CVE ID: CVE-2026-44119
+  Description: Improper Privilege Management vulnerability in Apache HTTP Server 2.4.67 and earlier allows local .htaccess authors to read files with the privileges of the httpd user.  This issue affects Apache HTTP Server: from through 2.4.67.  Users are recommended to upgrade to version 2.4.68, which fixes the issue.
+  Severity: MEDIUM
+---
+
+--- Recommendations ---
+* Review the NVD API results above. Because NVD keywordSearch does substring matching, verify each returned CVE's affected-version range actually includes the installed version before prioritizing remediation.
+
